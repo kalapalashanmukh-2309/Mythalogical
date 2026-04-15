@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Connect | Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">Event Connect</div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Login</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-container">
+      <section class="profile-card">
+        <p class="small-label">Profile Page</p>
+        <h1>Welcome, <span id="profileUsername">Student</span></h1>
+        <p>
+          This page reads the logged-in username from session storage and lets
+          the user log out safely.
+        </p>
+        <button id="logoutButton" class="danger-btn">Logout</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

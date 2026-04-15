@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Connect | Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">Event Connect</div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="index.html">Login</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-container">
+      <section class="welcome-panel">
+        <div>
+          <p class="small-label">Dashboard</p>
+          <h1>Event Services</h1>
+          <p>
+            Browse available services, add your own service card, and see live
+            organizer information from a simple API.
+          </p>
+        </div>
+        <div class="status-box">
+          <p><strong>Logged in user:</strong> <span id="dashboardUser">Guest</span></p>
+          <p><strong>Organizer from API:</strong> <span id="apiInfo">Loading...</span></p>
+        </div>
+      </section>
+
+      <section class="two-column-layout">
+        <div class="form-card">
+          <h2>Add New Service</h2>
+          <form id="serviceForm" novalidate>
+            <label for="serviceName">Service Name</label>
+            <input
+              type="text"
+              id="serviceName"
+              placeholder="Example: Birthday Decor"
+            />
+
+            <label for="serviceType">Service Type</label>
+            <input
+              type="text"
+              id="serviceType"
+              placeholder="Example: Decoration"
+            />
+
+            <label for="servicePrice">Price</label>
+            <input
+              type="number"
+              id="servicePrice"
+              placeholder="Example: 5000"
+            />
+
+            <label for="serviceContact">Contact Number</label>
+            <input
+              type="text"
+              id="serviceContact"
+              placeholder="Example: 9876543210"
+            />
+
+            <p id="serviceError" class="error-message"></p>
+            <button type="button" id="addServiceButton" class="primary-btn">
+              Add Service
+            </button>
+          </form>
+        </div>
+
+        <div class="media-card">
+          <h2>Media Section</h2>
+          <p>Audio and video are included as required HTML media elements.</p>
+
+          <audio controls class="full-media">
+            <source src="mahbha.mp3" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+
+          <video controls class="full-media" poster="mythic.jpg">
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+
+      <section class="service-section">
+        <div class="section-heading">
+          <h2>Available Services</h2>
+          <p id="loadingMessage">Loading services...</p>
+        </div>
+        <div id="servicesContainer" class="services-grid"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
